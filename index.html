@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiCut AI | Slimme Zaaglijsten voor Interieurbouwers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .wood-gradient {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+        .bg-navy {
+            background-color: #0f172a;
+        }
+        .modal-overlay {
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- Navigatie -->
+    <nav class="py-6 px-6 md:px-12 flex justify-between items-center bg-navy text-white">
+        <div class="flex items-center gap-2">
+            <i data-lucide="layout-template" class="text-amber-500 w-8 h-8"></i>
+            <span class="text-2xl font-extrabold tracking-tight">OptiCut<span class="text-amber-500 underline decoration-2 underline-offset-4">AI</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+            <a href="#features" class="hover:text-amber-500 transition">Hoe het werkt</a>
+            <a href="#pricing" class="hover:text-amber-500 transition">Prijzen</a>
+        </div>
+        <button onclick="openModal()" class="wood-gradient px-6 py-2 rounded-lg font-bold text-sm shadow-lg hover:scale-105 transition-transform">
+            Probeer Gratis
+        </button>
+    </nav>
+
+    <!-- Hero Sectie -->
+    <header class="relative bg-navy text-white pt-20 pb-32 px-6 overflow-hidden">
+        <!-- Decoratieve achtergrond elementen -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-800/20 skew-x-12 transform translate-x-20"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6">
+                    Powered by Artificial Intelligence
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Stop met rekenen. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Haal het maximale</span> uit je hout.
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 max-w-xl leading-relaxed">
+                    De AI-zaaglijst generator voor interieurbouwers. Upload je maten, minimaliseer je snijverlies en genereer in 3 seconden je zaagplan en offerte.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="openModal()" class="wood-gradient px-8 py-4 rounded-xl font-extrabold text-lg shadow-2xl hover:brightness-110 transition flex items-center justify-center gap-2">
+                        Start 14 Dagen Gratis Trial <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                    <div class="flex items-center gap-3 px-4 py-2">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-navy bg-slate-500" src="https://i.pravatar.cc/100?u=1" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-navy bg-slate-500" src="https://i.pravatar.cc/100?u=2" alt="User">
+                        </div>
+                        <span class="text-sm text-slate-400">Gekozen door 150+ vakmensen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Sectie -->
+    <section id="features" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Gebouwd voor de werkplaats</h2>
+            <div class="w-20 h-1 bg-amber-500 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Feature 1 -->
+            <div class="group p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="sprout" class="text-amber-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Bespaar op Hout</h3>
+                <p class="text-slate-600 leading-relaxed">Onze AI berekent de meest efficiënte indeling. Minder restafval betekent direct meer marge op elk project.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="group p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="clock" class="text-amber-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Bespaar Tijd</h3>
+                <p class="text-slate-600 leading-relaxed">Geen complexe wiskunde of urenlang puzzelen op ruitjespapier. Upload je Excel of CSV en klaar.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="group p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="file-text" class="text-amber-600 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Directe PDF Export</h3>
+                <p class="text-slate-600 leading-relaxed">Genereer professionele zaagplannen en offertes met één druk op de knop. Direct klaar voor de werkplaats.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Sectie -->
+    <section id="pricing" class="py-24 bg-slate-50 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-navy rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="p-12 md:w-1/2 text-white">
+                    <h2 class="text-3xl font-bold mb-4">Simpel & Transparant</h2>
+                    <p class="text-slate-400 mb-8">Geen verborgen kosten. Geen ingewikkelde pakketten. Alles wat je nodig hebt om slim te zagen.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check-circle-2" class="text-amber-500 w-5 h-5"></i> Onbeperkt aantal zaagplannen</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check-circle-2" class="text-amber-500 w-5 h-5"></i> Alle materiaalsoorten (MDF, Eiken, etc.)</li>
+                        <li class="flex items-center gap-3 text-sm"><i data-lucide="check-circle-2" class="text-amber-500 w-5 h-5"></i> Offerte module inclusief</li>
+                    </ul>
+                </div>
+                <div class="p-12 md:w-1/2 bg-white flex flex-col justify-center items-center text-center">
+                    <span class="text-slate-500 uppercase tracking-widest text-xs font-bold mb-2">B2B FLAT FEE</span>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-5xl font-extrabold">€29</span>
+                        <span class="text-slate-500">/maand</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-8 italic">"Verdient zichzelf terug bij je eerste gezaagde plaat."</p>
+                    <button onclick="openModal()" class="wood-gradient w-full py-4 rounded-xl font-extrabold text-white shadow-lg hover:brightness-110 transition">
+                        Start Trial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-slate-100 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 OptiCut AI / ZaagSlim. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <!-- MODAL (Fake Door) -->
+    <div id="modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div class="modal-overlay absolute inset-0" onclick="closeModal()"></div>
+        <div class="bg-white rounded-3xl p-8 md:p-12 max-w-lg w-full relative z-10 shadow-2xl transform transition-all border-t-8 border-amber-600">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="rocket" class="text-amber-600 w-8 h-8"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Je bent er vroeg bij!</h2>
+                <p class="text-slate-600">
+                    OptiCut AI zit momenteel in een gesloten bèta-testfase. Laat je e-mailadres achter voor direct bericht bij de release en ontvang <span class="font-bold text-amber-600 underline">50% levenslange early-bird korting</span>.
+                </p>
+            </div>
+
+            <!-- Formspree Integratie -->
+            <form action="https://formspree.io/f/mpqjjgdq" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">E-mailadres</label>
+                    <input type="email" name="email" required placeholder="bijv. info@jouwwerkplaats.nl" 
+                           class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                </div>
+                <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg">
+                    Zet mij op de wachtlijst
+                </button>
+            </form>
+            <p class="text-[10px] text-center text-slate-400 mt-4 uppercase tracking-widest">Geen spam. Alleen updates over de lancering.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialiseer Lucide Iconen
+        lucide.createIcons();
+
+        // Modal Functies
+        const modal = document.getElementById('modal');
+        
+        function openModal() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop scrollen op achtergrond
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Sluit modal met Escape toets
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
